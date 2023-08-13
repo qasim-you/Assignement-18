@@ -21,11 +21,27 @@ const ones = {
 16 : "sixteen", 
 17 : "seventeen", 
 18: "eighteen", 
-19 : "nineteen",  
+19 : "nineteen" 
 } ;
+const prefixes = {
+    2: "tewnty",
+    3: "thirty",
+    4: "fourty",
+    5: "fifty",
+    6: "sixty",
+    7: "seventy",
+    8: "eighty",
+    9: "ninety"
+ } ; 
+
 
 form.onsubmit = (event) => {
   event.preventDefault() ;
 
-  converted.innerHTML  = num.value ;
+     if(+num.value in ones ){
+        converted.innerHTML  = ones[+num.value] ;
+     }
+     if (num.value.length === 2 && +num.value > 19 ) {
+        converted.innerHTML = prefixes[] ;
+     }
 } ;
