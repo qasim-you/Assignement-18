@@ -41,7 +41,18 @@ form.onsubmit = (event) => {
      if(+num.value in ones ){
         converted.innerHTML  = ones[+num.value] ;
      }
-     if (num.value.length === 2 && +num.value > 19 ) {
-        converted.innerHTML = prefixes[] ;
+
+     const numArray = num.value.split("") 
+     if(numArray.length === 2 && +num.value > 19){
+        converted.innerHTML = prefixes[numArray[0]] + "" 
+        + ones[numArray[1]] ;
+     }
+     if (numArray.length === 3 ) {
+        if (+numArray[1] === 0) {
+            converted.innerHTML = ones[numArray[0]] + 'Hndred'
+             + '' + ones[numArray[2]] ;
+        }
+        else if(+numArray[1] < 2 ) ;
+        
      }
 } ;
