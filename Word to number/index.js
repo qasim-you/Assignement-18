@@ -112,7 +112,20 @@ form.onsubmit = (event) => {
         "hundred" +
         "  " +
         ones[+[numArray[2], numArray[3]].join("")];
-    } else {
+    } else if (+numArray[1] <= 2)  {
+      converted.innerHTML =
+        ones[numArray[0]] +
+        " lakh " +
+        ones[numArray[1]] +
+        " thousand " +
+        ones[numArray[2]] +
+        "hundred" +
+        " " +
+        prefixes[numArray[3]] + ""
+         +
+        ones[numArray[4]];
+    }
+    else{
       converted.innerHTML =
         ones[numArray[0]] +
         " lakh " +
@@ -123,7 +136,7 @@ form.onsubmit = (event) => {
         " " +
         prefixes[numArray[3]] +
         " " +
-        ones[numArray[4]];
+          ones[numArray[4]] ;
     }
   }
 };
