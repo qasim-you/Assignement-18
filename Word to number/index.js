@@ -50,9 +50,32 @@ form.onsubmit = (event) => {
      if (numArray.length === 3 ) {
         if (+numArray[1] === 0) {
             converted.innerHTML = ones[numArray[0]] + 'Hndred'
-             + '' + ones[numArray[2]] ;
+             + " " + ones[numArray[2]] ;
         }
-        else if(+numArray[1] < 2 ) ;
+        else if(+numArray[1] < 2 ) {
+            converted.innerHTML = ones[numArray[0]] + 'Hndred'
+            + " " + ones[+([numArray[1],numArray[2]]).join("")] ;
+        } 
+        else{
+            converted.innerHTML = ones[numArray[0]] + 'hundred' + prefixes[numArray[1]] + " " + 
+            ones[numArray[2]] ;
+        }
         
      }
+
+     if (numArray.length === 4 ) {
+        if (+numArray[1] === 0) {
+            converted.innerHTML = ones[numArray[0]] + 'thousands'+ ones[numArray[1]] +
+            'Hundred' + " " + ones[numArray[3]] ;
+        }
+        else if(+numArray[1] < 2 ) {
+            converted.innerHTML = ones[numArray[0]] + 'thousands'+ ones[numArray[1]] + 'hundred' + " " + ones[+([numArray[2],numArray[3]]).join("")] ;
+        } 
+        else{
+            converted.innerHTML = ones[numArray[0]] + 'thousands'+ ones[numArray[1]] + 'hundred' + prefixes[numArray[2]] + " " + 
+            ones[numArray[3]] ;
+        }
+        
+     }
+     
 } ;
