@@ -1,22 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Word to Number</title>
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Change Number to Equivalent English Word</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-</head>
-<body>
-    <main>
-        <form id="form">
-            <label for="form"></label>
-            <input type="number" id="num" name="num"/>
-            <input type="submit" value="submit"/>
-        </form>
-           <h3> Converted:   <span id="converted"></span></h3>       
-    </main>
-    
-<script src="./index.js"></script>
-</body>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+
+    <div class="wrapper"> <!-- start of wrapper -->
+      <section> 
+ 
+         <form class="number-to-word-form">
+           <div>
+             <div class="input-container">
+                <input type="text"  id="number-text-field" maxlength="9" placeholder="Enter Number here" />
+                <input type="submit" value="Convert to word"  id="convert-to-word-btn" />
+             </div>
+             <div class="content" id="content">
+             Converted :
+             </div>
+           </div>
+         </form>
+      </section><!-- end of section -->
+
+   </div> <!-- end of wrapper -->
+    <script src="./index.js"></script>
+  </body>
 </html>
