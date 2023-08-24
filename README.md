@@ -1,2 +1,2 @@
 # Assignement-18 
-word to
+word to number
