@@ -1,4 +1,3 @@
-
 let EventUtility = {
 	addHandler : (element , type , handler) => {
 		if (element.addEventListener) {
